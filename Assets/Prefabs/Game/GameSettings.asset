@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2816444f33ff03f4e831c2cd6ed46815, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  prefixes:
+  - Aer
+  - Anch
+  - Argon
+  - Es
+  - Ev
+  - Fa
+  - Hyb
+  - Hyp
+  - Kum
+  - Maf
+  - Mer
+  - Mid
+  - Sar
+  - Sp
+  - Val
+  - Wes
+  - West
+  - Eas
+  - East
+  - Nor
+  - Nort
+  - North
+  - Sou
+  - Sout
+  - South
+  - Zakh
+  - Amer
+  - Eur
+  - Afr
+  - Asi
+  - Antar
+  - Ocean
+  - Ocea
+  - Oce
+  suffixes:
+  - nal
+  - ome
+  - ssen
+  - os
+  - rice
+  - run
+  - ria
+  - rea
+  - dam
+  - ari
+  - ri
+  - ca
+  - pis
+  - rth
+  - na
+  - ra
+  - nor
+  - ros
+  - hara
+  - rica
+  - rope
+  - pe
+  - ia
+  - sia
+  - na
+  - lia
+  centres:
+  - a
+  - e
+  - i
+  - o
+  - u
+  - y
+  - re
+  - er
+  - oro
+  - or
+  - ro
+  - ana
+  - ama
+  - an
+  - am
+  - ma
+  - na
+  - ir
+  - ri
+  climates:
+  - {fileID: 11400000, guid: 1268c3ec23d131c4b89c26d20b234d5b, type: 2}
+  - {fileID: 11400000, guid: 5d7ce8c0ae18d6049b286cf806c45730, type: 2}
+  - {fileID: 11400000, guid: 775fbfd987ef8014e9f1dd0e28af5667, type: 2}
+  - {fileID: 11400000, guid: ee4d872ec6203c8409b310f8717ed5dc, type: 2}
+  - {fileID: 11400000, guid: fee8f0aee690fc746b2b21845a71e2fe, type: 2}
+  - {fileID: 11400000, guid: 223034b8fbc399c42ab2d873d8ecca18, type: 2}
