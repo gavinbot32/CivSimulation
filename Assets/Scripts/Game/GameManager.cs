@@ -17,11 +17,45 @@ public class GameManager : MonoBehaviour
             LandScript land = Instantiate(landPrefab).GetComponent<LandScript>();
             land.initialize(gameSettings.climates[Random.Range(0, gameSettings.climates.Length)]);
             continents.Add(land);
-            land.transform.position = new Vector3(Random.Range(bounds.x + land.transform.localScale.x, bounds.y - land.transform.localScale.x),
-                0, Random.Range(bounds.z + land.transform.localScale.z, bounds.w - land.transform.localScale.z));
+            
+            land.transform.position = new Vector3(Random.Range(bounds.x + (land.transform.localScale.x / 2), bounds.y - (land.transform.localScale.x / 2)),
+                0, Random.Range(bounds.z + (land.transform.localScale.z / 2), bounds.w - (land.transform.localScale.z / 2)));
+            foreach (LandScript other in continents)
+            {
+              
+                if (other != land)
+                {
+                    int rounds = 0;
+                    while (true) {
+                        rounds += 1;
 
+                        land.transform.position = new Vector3(Random.Range(bounds.x + (land.transform.localScale.x / 2), bounds.y - (land.transform.localScale.x / 2)),
+                    0, Random.Range(bounds.z + (land.transform.localScale.z / 2), bounds.w - (land.transform.localScale.z / 2))); 
+                        if ((land.transform.position.x - (land.transform.localScale.x / 2) <= other.transform.position.x - (other.transform.localScale.x / 2) &&
+                        land.transform.position.x + (land.transform.localScale.x / 2) >= other.transform.position.x + (other.transform.localScale.x / 2))&&
+                            (land.transform.position.z - (land.transform.localScale.z / 2) <= other.transform.position.z - (other.transform.localScale.z / 2) &&
+                        land.transform.position.z + (land.transform.localScale.z / 2) >= other.transform.position.z + (other.transform.localScale.z / 2)))
+                        {
+                            break;
+                        }
+
+                        if(rounds >= 50)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+           
         }
-    }
+
+            
+            
+        }
+    
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,3 +69,4 @@ public class GameManager : MonoBehaviour
         
     }
 }
+
