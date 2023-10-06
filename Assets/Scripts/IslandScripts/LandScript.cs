@@ -55,15 +55,16 @@ public class LandScript : MonoBehaviour
     }
 
 
-
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.CompareTag("Continent"))
+        print("Land Ho");
+        if (other.gameObject.CompareTag("Continent"))
         {
-            print("Land Ho");
+
             transform.position = new Vector3(Random.Range(bounds.x + transform.localScale.x, bounds.y - transform.localScale.x),
-               0, Random.Range(bounds.z + transform.localScale.z, bounds.w -transform.localScale.z));
+               0, Random.Range(bounds.z + transform.localScale.z, bounds.w - transform.localScale.z));
         }
     }
+
 
 }

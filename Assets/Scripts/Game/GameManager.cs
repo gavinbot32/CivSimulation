@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class GameManager : MonoBehaviour
     public List<LandScript> continents;
     public Vector4 bounds;
     public Vector2 landMinMaxes;
+
     private void Awake()
     {
         for (int i = 0; i < islandCount; i++)
@@ -20,36 +23,64 @@ public class GameManager : MonoBehaviour
             
             land.transform.position = new Vector3(Random.Range(bounds.x + (land.transform.localScale.x / 2), bounds.y - (land.transform.localScale.x / 2)),
                 0, Random.Range(bounds.z + (land.transform.localScale.z / 2), bounds.w - (land.transform.localScale.z / 2)));
+
+
+/*
             foreach (LandScript other in continents)
             {
-              
+               
                 if (other != land)
                 {
-                    int rounds = 0;
-                    while (true) {
-                        rounds += 1;
-
+                    float distance;
+                    float distThreshold;
+                    bool place = false;
+                    while (place == false)
+                    {
                         land.transform.position = new Vector3(Random.Range(bounds.x + (land.transform.localScale.x / 2), bounds.y - (land.transform.localScale.x / 2)),
-                    0, Random.Range(bounds.z + (land.transform.localScale.z / 2), bounds.w - (land.transform.localScale.z / 2))); 
-                        if ((land.transform.position.x - (land.transform.localScale.x / 2) <= other.transform.position.x - (other.transform.localScale.x / 2) &&
-                        land.transform.position.x + (land.transform.localScale.x / 2) >= other.transform.position.x + (other.transform.localScale.x / 2))&&
-                            (land.transform.position.z - (land.transform.localScale.z / 2) <= other.transform.position.z - (other.transform.localScale.z / 2) &&
-                        land.transform.position.z + (land.transform.localScale.z / 2) >= other.transform.position.z + (other.transform.localScale.z / 2)))
+                0, Random.Range(bounds.z + (land.transform.localScale.z / 2), bounds.w - (land.transform.localScale.z / 2)));
+
+                        float landDistVar;
+                        float otherDistVar;
+                        if (land.transform.localScale.x >= land.transform.localScale.z)
                         {
-                            break;
+                            landDistVar = land.transform.localScale.x;
+                        }
+                        else
+                        {
+                            landDistVar = land.transform.localScale.z;
+                        }
+                        if (other.transform.localScale.x >= other.transform.localScale.z)
+                        {
+                            otherDistVar = other.transform.localScale.x;
+                        }
+                        else
+                        {
+                            otherDistVar = other.transform.localScale.z;
                         }
 
-                        if(rounds >= 50)
+                        distThreshold = (landDistVar + otherDistVar / 2) + (landDistVar / 3);
+                        distance = Vector3.Distance(land.transform.position, other.transform.position);
+                        print(distThreshold);
+
+
+                        if (distance > distThreshold)
                         {
-                            break;
+                            print((land.landName, distance, other.landName, "Good Spawn"));
+                            place = true;
                         }
+                        else
+                        {
+                            print((land.landName, distance, other.landName, "Less Than Threshold"));
+                        }
+
                     }
+
                 }
-            }
-           
+            }*/
+
         }
 
-            
+  
             
         }
     
