@@ -20,3 +20,8 @@ MonoBehaviour:
   mineral_level: 1
   moisture_level: 4
   climate_mat: {fileID: 2100000, guid: 84e79ffa4390e8e40add1012c1b4c62b, type: 2}
+  trees:
+  - {fileID: 5003110066524304566, guid: ffd91b2029328e34a90d8e20f77db50e, type: 3}
+  - {fileID: 5729771901831943899, guid: 0b8428389c22ecf4197348dd1bbcb024, type: 3}
+  - {fileID: 1284247314854946684, guid: 264276023e380d54d93b930f047c9fea, type: 3}
+  - {fileID: 3529940074722045563, guid: 9eb1e1ffc839824438456925582b36a5, type: 3}

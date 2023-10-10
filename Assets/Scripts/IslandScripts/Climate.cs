@@ -15,4 +15,6 @@ public class Climate : ScriptableObject
     public int moisture_level;
 
     public Material climate_mat;
+
+    public GameObject[] trees;
 }

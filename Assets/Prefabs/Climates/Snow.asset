@@ -20,3 +20,15 @@ MonoBehaviour:
   mineral_level: 2
   moisture_level: 4
   climate_mat: {fileID: 2100000, guid: 7f8ea80d6b179524db7b4547f1e139ec, type: 2}
+  trees:
+  - {fileID: 5117784476539602899, guid: a916f3a81f02bf24ba3bb300a21d9c3b, type: 3}
+  - {fileID: 921485715613649804, guid: a855b6f35fa86cf478a3229086a9b742, type: 3}
+  - {fileID: 6468063891454638865, guid: f3d6b5cb45679d24d8b1b743381cc014, type: 3}
+  - {fileID: 4150291435124116777, guid: cdc76d6e850e40f4395aac801a546bf6, type: 3}
+  - {fileID: 1490985558074516935, guid: c2406c1eb1c2a244dae1ee445f9d1747, type: 3}
+  - {fileID: 7238910482208595812, guid: a7406ae7a6bb09245a23ef7d1c1d805c, type: 3}
+  - {fileID: 6856535218500439967, guid: aec1d71997b81a14caee655e666fdb12, type: 3}
+  - {fileID: 6390424120552528432, guid: a5c040c4e10d4de49b09fcb922fb9851, type: 3}
+  - {fileID: 4330758536035108033, guid: b5ee29b830ffd204d883b8ae0c4777eb, type: 3}
+  - {fileID: 1542694612357865786, guid: 553064bb485f34943a397a7f0dc6bb61, type: 3}
+  - {fileID: 2029642136869441616, guid: 4ccdfe416753e9c4e811469033b37456, type: 3}
